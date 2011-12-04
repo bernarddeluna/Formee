@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Formee - http://www.formee.org</title>
+<link rel="stylesheet" href="css/formee-structure.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/formee-style.css" type="text/css" media="screen" />
+<style type="text/css">
+* {margin:0;padding:0;}
+/* fix  ff bugs */
+form:after, div:after, ol:after, ul:after, li:after, dl:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+body {background: #fff; font: normal 10px/1.1em Arial,Sans-Serif;margin:0;padding:0;}
+form {clear:both;}
+.container {margin:0 auto; height:100%;padding:0 40px;}
+.footer, .footer a {color:#fff;}
+.left {float:left;}
+.right {float:right;}
+.topbar {
+	background: #fafafa;
+	padding: 10px 30px;
+  border-bottom:1px solid #e9e9e9;
+}
+.topbar a{
+	color:#777;
+	font-size:1.4em;
+	text-decoration: none;
+}
+.topbar a:hover{
+	color:#69a4d0;
+	text-decoration: underline;
+}
+.formeebar {
+	background: #f5f5f5;
+	padding:30px;
+  border-bottom:1px solid #e9e9e9;
+  margin-bottom:40px;
+}
+.formeebar a {color:#fff;font-size:1.4em;text-decoration: none;}
+.formeebar h1 {
+  clear:both;
+  float:left;
+}
+.formeebar h1 a{
+  background: transparent url(img/formee-logo.png) no-repeat left top;
+  text-indent:-9999px;
+  overflow: hidden;
+  width:147px;
+  height: 50px;
+  display: block;
+}
+.formeebar h2 {
+	color:#520026;
+	font-size:2.4em;
+	font-weight:normal;
+	 float:right;
+	 display:inline;
+	 margin-top:20px;
+}
+
+/* table */
+table {border:1px solid #ccc; clear:both;width: 100%;background:#f4dce6;border-collapse: collapse;font: normal 1em Arial,Sans-Serif;color:#333;margin-bottom:30px;}
+table td {padding:20px;}
+table thead td {background: #333; padding:10px;color:#fff;font: bolder 2em Arial,Sans-Serif;}
+table th {background: #333; padding: 10px 20px;color:#fff;font: bolder 2em Arial,Sans-Serif;text-align:left;}
+table tbody tr td {font-size:1.6em;}
+table tbody tr:nth-child(odd) {background: #ecd2dd;}
+table tbody tr:hover {
+	/*corner*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background:#f9eaf1
+  /* shadow */
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255,255,255,1), 0 2px 4px 0 rgba(0,0,0,.3);
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255,255,255,1), 0 2px 4px 0 rgba(0,0,0,.3);
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,1), 0 2px 4px 0 rgba(0,0,0,.3);
+  /* gradient */
+  background: -moz-linear-gradient(top, #fcf6f9 40%, #f9eaf1);
+  background: -webkit-linear-gradient(top, #fcf6f9 40%, #f9eaf1);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf6f9', endColorstr='#f9eaf1');
+}
+.td-class {width:150px;font-size:1.2em;}
+.td-example {max-width:400px;font-size:1.2em;}
+.td-class span {
+	white-space: nowrap;
+	font-weight:bolder;
+	font-size: 1.4em;
+	color:#fff;
+	padding:10px;
+	display:block; 
+	float:left;
+	background: #EA0076;
+	/*corner*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+  /* shadow */
+  -moz-box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), inset 0 3px 4px 0 rgba(0,0,0,.3);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), inset 0 3px 4px 0 rgba(0,0,0,.3);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), inset 0 3px 4px 0 rgba(0,0,0,.3);
+  /* gradient */
+  background: -moz-linear-gradient(top, #EA0076 40%, #de0070);
+  background: -webkit-linear-gradient(top, #EA0076 40%, #de0070);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#EA0076', endColorstr='#de0070');
+}
+.td-example pre {
+	background:#f5f5f5;
+  max-height:200px;
+  margin-bottom:1em;
+  overflow-y: auto;
+  padding:10px;
+  border:1px solid #bbb;
+	/*corner*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.td-example pre:hover, .td-example pre:focus {
+	background:#fff;
+}
+.td-example pre, .td-example code {display: block; height:auto;font: normal 1em/2em "Courier New", Courier, monospace,Sans-Serif;}
+.td-example code span {font-weight: bolder; color:#780234;}
+
+
+.link-to {
+	font-size:2.4em;
+	letter-spacing:-.02em;
+	line-height:1em;
+	color:#EA0076;
+	float:right;
+	margin-bottom:2em;
+}
+
+/* footer */
+.footer {background: #520026;padding:30px 0;margin-top:40px;color:#fff;}
+.footer p {line-height:1.1em; font-size:1.2em; margin-bottom:.3%;}
+.footer a {color:#F0CF73;font-size:1.4em;text-decoration: none;}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+    	  <a class="left" href="http://www.formee.org" title="Formee website"><strong>www.formee.org</strong></a>
+    	  <a class="right" href="http://www.twitter.com/formeeframework" title="@formeeframework">@formeeframework</a>
+    	</div>     
+<div class="formeebar">
+
+	<h1><a href="http://www.formee.org" title="Formee website">www.Formee.org</a></h1>
+    <h2><strong>DEMO</strong> / Fresh baked forms for your websites!</h2>
+</div>
+<div class="container">
+    <p><a class="link-to" href="index.htm" title="take a look at our demo">take a look at our demo</a></p>
+	<table>
+    	<thead>
+            <tr>
+              <td>Class</td>
+              <td>Description</td>
+              <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="td-class"><span>.formee</span></td>
+              <td>General attributes for FORM</td>
+              <td class="td-example">
+              <pre><code>&lt;form class=&quot;<span>formee</span>&quot;&gt; &lt;/form&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-class"><span>.grid-$-12</span></td>
+              <td>How many ($) of 12 equal columns the container fills</td>
+              <td class="td-example">
+              <pre><code>&lt;div class=&quot;<span>grid-12-12</span>&quot;&gt;</code><code>. . .</code><code>&lt;/div&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-class"><span>.formee-req</span></td>
+              <td>Attributes to customize REQUIRED asterisk</td>
+              <td class="td-example">
+              <pre><code>&lt;em class=&quot;<span>formee-req</span>&quot;&gt;*&lt;/em&gt;</code></pre>              </td>
+            </tr>
+            <tr>
+              <td class="td-class"><span>.formee-list</span></td>
+              <td>Attributes to customize LIST of INPUT RADIO or CHECKBOX</td>
+              <td class="td-example">
+              <pre><code>&lt;ul class=&quot;<span>formee-list</span>&quot;&gt;</code><code>   &lt;li&gt;</code><code>    &lt;input name=&quot;&quot; type=&quot;radio&quot; /&gt;</code><code>    &lt;label for=&quot;&quot;&gt;Opt. 01&lt;/label&gt;</code><code>   &lt;/li&gt;</code><code>   &lt;li&gt;</code><code>    &lt;input name=&quot;&quot; type=&quot;radio&quot; /&gt;</code><code>    &lt;label for=&quot;&quot;&gt;Opt. 02&lt;/label&gt;</code><code>   &lt;/li&gt;</code><code>&lt;/ul&gt;</code></pre>
+              
+              <pre><code>&lt;ul class=&quot;<span>formee-list</span>&quot;&gt;</code><code>   &lt;li&gt;</code><code>    &lt;input name=&quot;&quot; type=&quot;checkbox&quot; /&gt;</code><code>    &lt;label for=&quot;&quot;&gt;Opt. 01&lt;/label&gt;</code><code>   &lt;/li&gt;</code><code>   &lt;li&gt;</code><code>    &lt;input name=&quot;&quot; type=&quot;checkbox&quot; /&gt;</code><code>    &lt;label for=&quot;&quot;&gt;Opt. 02&lt;/label&gt;</code><code>   &lt;/li&gt;</code><code>&lt;/ul&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-class"><span>.formee-button</span></td>
+              <td>Attributes to customize an INPUT BUTTON</td>
+              <td class="td-example">
+              <pre><code>&lt;input class=&quot;<span>formee-button</span>&quot; type=&quot;submit&quot; value=&quot;send&quot; /&gt;</code></pre>
+              </td>
+            </tr>
+          
+          <tr>
+          		<th colspan="3">Floatting</th>
+          </tr>
+            <tr>
+              <td class="td-class"><span>.clear</span></td>
+              <td>Specify which column where other floating elements are not allowed</td>
+              <td class="td-example">
+              <pre><code>&lt;div class=&quot;grid-3-12 <span>clear</span>&quot;&gt;</code><code>   &lt;input type=&quot;text&quot; value=&quot;Fill up the field&quot; /&gt;</code><code>&lt;/div&gt;</code></pre>
+              </td>
+            </tr>
+          <tr>
+              <td class="td-class"><span>.right</span></td>
+              <td>Attributes for float elements to the right</td>
+              <td class="td-example">
+              <pre><code>&lt;input class=&quot;formee-button <span>right</span>&quot; type=&quot;submit&quot; value=&quot;send&quot; /&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-class"><span>.left</span></td>
+              <td>Attributes for float elements to the left</td>
+              <td class="td-example">
+              <pre><code>&lt;input class=&quot;formee-button <span>left</span>&quot; type=&quot;submit&quot; value=&quot;send&quot; /&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-class"><span>.formee-equal</span></td>
+              <td>Attributes for equal height elements (fixing float bugs)</td>
+              <td class="td-example">
+              <pre><code>&lt;div class=&quot;grid-3-12 <span>formee-equal</span>&quot;&gt;</code><code>   &lt;input type=&quot;text&quot; value=&quot;Fill up the field&quot; /&gt;</code><code>&lt;/div&gt;</code></pre>
+              </td>
+            </tr>
+          <tr>
+          		<th colspan="3">Size</th>
+          </tr>
+            <tr>
+				<td class="td-class"><span>.formee-small</span></td>
+				<td>Define the width of form elements as SMALL</td>
+				<td class="td-example">
+				<pre><code>&lt;input type=&quot;text&quot; class=&quot;<span>formee-small</span>&quot; value=&quot;Fill up the field&quot; /&gt;</code></pre>
+				</td>
+          </tr>
+          <tr>
+				<td class="td-class"><span>.formee-medium</span></td>
+				<td>Define the width of form elements as MEDIUM </td>
+				<td class="td-example">
+				<pre><code>&lt;input type=&quot;text&quot; class=&quot;<span>formee-medium</span>&quot; value=&quot;Fill up the field&quot; /&gt;</code></pre>
+				</td>
+          </tr>
+          <tr>
+          		<th colspan="3">Message box</th>
+          </tr>
+            <tr>
+				<td class="td-class"><span>.formee-msg-info</span></td>
+				<td>Custom message for information</td>
+				<td class="td-example">
+				<pre><code>&lt;div class=&quot;<span>formee-msg-info</span>&quot;&gt;&lt;h3&gt;Information Message&lt;/h3&gt;&lt;/div&gt;</code></pre>
+				</td>
+          </tr>
+          <tr>
+				<td class="td-class"><span>.formee-msg-warning</span></td>
+				<td>Custom message for warning</td>
+				<td class="td-example">
+				<pre><code>&lt;div class=&quot;<span>formee-msg-warning</span>&quot;&gt;&lt;h3&gt;Warning Message&lt;/h3&gt;&lt;/div&gt;</code></pre>
+				</td>
+          </tr>
+          <tr>
+				<td class="td-class"><span>.formee-msg-error</span></td>
+				<td>Custom message for error</td>
+				<td class="td-example">
+				<pre><code>&lt;div class=&quot;<span>formee-msg-error</span>&quot;&gt;&lt;h3&gt;Error Message&lt;/h3&gt;&lt;/div&gt;</code></pre>
+				</td>
+          </tr>
+          <tr>
+				<td class="td-class"><span>.formee-msg-success</span></td>
+				<td>Custom message for success</td>
+				<td class="td-example">
+				<pre><code>&lt;div class=&quot;<span>formee-msg-success</span>&quot;&gt;&lt;h3&gt;Success Message&lt;/h3&gt;&lt;/div&gt;</code></pre>
+				</td>
+          </tr>
+        </tbody>
+    </table>
+    
+    
+    
+</div>  
+    
+    <div class="footer">
+    	<div class="container">
+    		<a href="http://www.formee.org" title="Formee">Formee</a> were created and developed by <a class="twitter-anywhere-user" href="http://www.bernarddeluna.com" title="bernard de luna">Bernard De Luna</a>, <a class="twitter-anywhere-user" href="http://www.dnlaraujo.com.br/" title="Daniel Araujo">Daniel Araujo</a>, <a class="twitter-anywhere-user" href="http://www.marcellomanso.com.br/" title="Marcello Manso">Marcello Manso</a>
+    	</div>
+    </div>
+
+</body>
+</html>
