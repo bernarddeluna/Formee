@@ -1,0 +1,121 @@
+/* =============================================================================
+   Formee RESET
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block;}
+.formee:after, .formee hgroup:after, .formee nav:after, .formee footer:after, .formee header:after, .formee section:after, .formee div:after, .formee ol:after, .formee ul:after, .formee li:after, .formee dl:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+.formee {margin: 0;}
+.formee fieldset {border: 0; margin: 0; padding: 0;}
+.formee legend {border: 0; *margin-left: -7px; padding: 0; white-space: normal;}
+.formee button, .formee input, .formee select, .formee textarea {font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;}
+.formee button, .formee input {line-height: normal;}
+.formee button, .formee input[type="button"], .formee input[type="reset"], .formee input[type="submit"] {cursor: pointer; -webkit-appearance: button; *overflow: visible;}
+.formee button[disabled], .formee input[disabled] {cursor: default;}
+.formee input[type="checkbox"], .formee input[type="radio"] {box-sizing: border-box; padding: 0; *width: 13px; *height: 13px;}
+.formee input[type="search"] {-webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+.formee input[type="search"]::-webkit-search-decoration, .formee input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none;}
+.formee button::-moz-focus-inner, .formee input::-moz-focus-inner {border: 0; padding: 0;}
+.formee textarea {overflow: auto; vertical-align: top; resize: vertical;}
+
+/* =============================================================================
+   Formee BASE
+   ========================================================================== */
+
+/* Field Grid */
+.grid-1-12, 
+.grid-2-12, 
+.grid-3-12, 
+.grid-4-12, 
+.grid-5-12, 
+.grid-6-12, 
+.grid-7-12, 
+.grid-8-12, 
+.grid-9-12, 
+.grid-10-12, 
+.grid-11-12, 
+.grid-12-12 {
+	display: block;
+	float:left;
+	position:relative;
+	margin: 1% 1%;
+	height:100%;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.grid-1-12 {width: 6.333%;}
+.grid-2-12 {width: 14.666%;}
+.grid-3-12 {width: 23%;}
+.grid-4-12 {width: 31.333%;}
+.grid-5-12 {width: 39.666%;}
+.grid-6-12 {width: 48%;}
+.grid-7-12 {width: 56.333%;}
+.grid-8-12 {width: 64.666%;}
+.grid-9-12 {width: 73%;}
+.grid-10-12 {width: 81.333%;}
+.grid-11-12 {width: 89.666%;}
+.grid-12-12 {width: 98%;}
+
+.formee-clear {clear:both;}
+/* form elements  */
+.formee-lbl, .formee label {
+	display: block;
+	height: auto;
+	margin: 0.2em 0 0.5em;
+}
+.formee .formee-txt, 
+.formee input,
+.formee textarea, 
+.formee select {
+	display: inline-block;
+	width: 100%;
+	padding:10px;
+	border: 1px solid #aaa;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	line-height: 1.1em;
+}
+.formee-list {
+	height: 100%;
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.formee-list li, .formee-list li {
+	margin: 0 1% 1% 0;
+	display: inline-block;
+	list-style:none;
+}
+.formee-list input {margin-right: 0.2em}
+
+/* msg */
+.formee-msg-info, .formee-msg-warning, .formee-msg-error, .formee-msg-success {
+	padding:10px;
+	border: 1px solid #ccc;
+	display: block;
+	height: auto;
+	margin: 0 1% .4%;
+	clear:both;
+}
+
+/* sizes */
+
+/* input size */
+.formee .formee-small {
+	width: 30%;
+	margin-right: 10px;
+}
+.formee .formee-medium {
+	width: 50%;
+	margin-right: 10px;
+}
