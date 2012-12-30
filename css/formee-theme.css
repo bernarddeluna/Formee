@@ -1,0 +1,99 @@
+/* =============================================================================
+   Formee THEME
+   ========================================================================== */
+
+/* typography */
+.formee {font: normal 10px/1.1em Arial,Sans-Serif;}
+
+/* formee elements */
+.formee-text, .formee button, .formee input, .formee select, .formee textarea {
+	font-size:1.6em;
+	font-family:inherit;
+	line-height: normal;
+	color:#999;
+	border-color:#c6c6c6 #dadada #eaeaea;
+	background-color: #fafafa;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 0 rgba(0,0,0,.07);
+}
+.formee-lbl, .formee label {
+	font-size:1.6em;
+	line-height: 1.3em;
+	color:#2b2b2b;
+}
+.formee-text:focus, .formee input:focus, .formee select:focus, .formee textarea:focus {
+	outline:none;
+	color:#2b2b2b;
+	background-color:#fff;
+	border-color:#65a1c0 #9bc6dd #bcdaeb;
+	box-shadow: 0 0 5px 0 #bcdaeb;
+}
+.formee button, .formee input[type=submit], .formee input[type=cancel], .formee-btn {
+	font-size:1.6em;
+	font-family:inherit;
+	line-height: normal;
+	text-decoration: none;
+	color:#2b2b2b;
+	border-color: #ddd #ccc #c6c6c6;
+	background-color: #e7e7e7;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,.7), rgba(255,255,255,0));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,.7), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,.7), rgba(255,255,255,0));
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,.7), rgba(255,255,255,0));
+	background-image: linear-gradient(top, rgba(255,255,255,.7), rgba(255,255,255,0));
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+	box-shadow: inset 0 1px 0 0 rgba(255,255,255,.4), 0 1px 1px 0 rgba(0,0,0,.07);
+}
+.formee button:hover, .formee input[type=submit]:hover, .formee input[type=cancel]:hover, .formee-btn:hover, .formee button:focus, .formee input[type=submit]:focus, .formee input[type=cancel]:focus, .formee-btn:focus {background-color:#ddd;}
+.formee .formee-btn.formee-btn-cta {
+	color:#fff;
+	border-color: #4aa8d8 #3e92be #2b7ea8;
+	background-color: #65A1C0;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+.formee .formee-btn.formee-btn-cta:hover, .formee .formee-btn.formee-btn-cta:focus {background-color:#3e92be;}
+
+/* read only */
+.formee input[readonly], .formee input[readonly]:focus {
+	color:#999;
+	border-color:#c6c6c6 #dadada #eaeaea;
+	background:#f1f1f1;
+	box-shadow:none;
+}
+
+/* msg */
+.formee-msg {
+	background-color:#f5f5f5;
+	border-color:#dadada;
+	border-radius:4px;
+}
+.formee-msg-success {
+	color:#468847;
+	border-color:#D6E9C6;
+	background-color:#DFF0D8;
+}
+.formee-msg-success p {font-size:1.6em;}
+.formee-msg-info {
+	color:#3A87AD;
+	border-color:#BCE8F1;
+	background-color:#D9EDF7;
+}
+.formee-msg-info p {font-size:1.6em;}
+.formee-msg-warning {
+	color:#C09853;
+	border-color:#FBEED5;
+	background-color:#FCF8E3;
+}
+.formee-msg-warning p {font-size:1.6em;}
+.formee-msg-error {
+	color:#B94A48;
+	border-color:#EED3D7;
+	background-color:#F2DEDE;
+}
+.formee-msg-error p {font-size:1.6em;}

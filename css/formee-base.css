@@ -14,7 +14,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 .formee fieldset {border: 0; margin: 0; padding: 0;}
 .formee legend {border: 0; *margin-left: -7px; padding: 0; white-space: normal;}
 .formee button, .formee input, .formee select, .formee textarea {font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;}
-.formee button, .formee input {line-height: normal;}
 .formee button, .formee input[type="button"], .formee input[type="reset"], .formee input[type="submit"] {cursor: pointer; -webkit-appearance: button; *overflow: visible;}
 .formee button[disabled], .formee input[disabled] {cursor: default;}
 .formee input[type="checkbox"], .formee input[type="radio"] {box-sizing: border-box; padding: 0; *width: 13px; *height: 13px;}
@@ -43,7 +42,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	display: block;
 	float:left;
 	position:relative;
-	margin: 1% 1%;
+	margin: 1% 1% .3%;
 	height:100%;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -68,14 +67,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 .formee-lbl, .formee label {
 	display: block;
 	height: auto;
-	margin: 0.2em 0 0.5em;
+	margin: 0.2em 0;
+	vertical-align:middle;
 }
-.formee .formee-txt, 
+.formee-txt, 
 .formee input,
 .formee textarea, 
 .formee select {
 	display: inline-block;
 	width: 100%;
+	height:42px;
 	padding:10px;
 	border: 1px solid #aaa;
 	-moz-box-sizing: border-box;
@@ -91,31 +92,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	padding:0;
 	margin:0;
 }
-.formee-list li, .formee-list li {
-	margin: 0 1% 1% 0;
-	display: inline-block;
+.formee-list li {
+	margin-bottom: .5%;
+	display: block;
 	list-style:none;
+	vertical-align: middle;
 }
-.formee-list input {margin-right: 0.2em}
+.formee-list input {
+	float:left;
+	margin: 4px 5px 0 0;
+	width: auto;
+	height:auto;
+	vertical-align: middle;
+}
+.formee-list label {
+	float:left;
+	width: auto;
+	margin: 0;
+	vertical-align: middle;
+}
+/* color */
+.formee input[type=color] {
+	width: 40px;
+	padding: 3px;
+}
+/* multiple select */
+.formee select[multiple] {
+	height: 120px;
+}
+
+/* Buttons */
+.formee button, .formee input[type=submit], .formee input[type=cancel], .formee-btn {
+	display: inline-block;
+	width: auto;
+	height:42px;
+	padding:10px 20px;
+	border: 1px solid #aaa;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	line-height: 1.1em;
+}
 
 /* msg */
-.formee-msg-info, .formee-msg-warning, .formee-msg-error, .formee-msg-success {
-	padding:10px;
+.formee-msg {
+	position:relative;
+	padding: 15px 10px 0;
 	border: 1px solid #ccc;
 	display: block;
 	height: auto;
 	margin: 0 1% .4%;
 	clear:both;
 }
+.formee-msg p {margin: 0 0 1em;}
+.formee-msg h2 {
+	margin: .1em 0 .6em;
+	font-size:2em;
+}
 
 /* sizes */
 
 /* input size */
 .formee .formee-small {
-	width: 30%;
-	margin-right: 10px;
+	width: 29%;
+	margin-right: 1%;
 }
 .formee .formee-medium {
-	width: 50%;
-	margin-right: 10px;
+	width: 49%;
+	margin-right: 1%;
 }
